@@ -1,5 +1,14 @@
-FAF-121-Caraganciu-Dan
-======================
+# Laboratories Repository
 
+## Personal Information
 
-Here are some changes
+**Student:** Caraganciu Dan	
+
+**Group:** FAF-121
+
+**GitHub nickname:** Caraganciu
+
+## Contained courses
+
+* WP
+* IDE

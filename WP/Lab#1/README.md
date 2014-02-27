@@ -67,5 +67,5 @@ This is a screen shot of the application in the virtual Windows 7 environment:
 
 Conclusion
 ------------------
-       This laboratory work turned out to be much more interesting and less complicated than it first seemed to be. I have learned a lot of new things like what is window and how to create it. My application has nice executable stuff in my opinion. I was inspired by the new method of execution of the laboratory works with “blue pill and red pill” so I came up with the idea of making two lists of students with their choice. I wanted to give a purpose to this application and not just put a box where you write any random stuff.
-      I think this laboratory work gave a nice experience on Event-driven programming and a good foundation on which to build more complex tasks.
+This laboratory work turned out to be much more interesting and less complicated than it first seemed to be. I have learned a lot of new things like what is window and how to create it. My application has nice executable stuff in my opinion. I was inspired by the new method of execution of the laboratory works with “blue pill and red pill” so I came up with the idea of making two lists of students with their choice. I wanted to give a purpose to this application and not just put a box where you write any random stuff.
+I think this laboratory work gave a nice experience on Event-driven programming and a good foundation on which to build more complex tasks.

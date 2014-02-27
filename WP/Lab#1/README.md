@@ -34,12 +34,15 @@ Objectives with Points
 
 Creating the application
 --------------------------
-	I started by reading the recommended chapters from the  book ("Programming Windows, 5th Edition", by Charles Petzold) so that I could understand the basics and begin my first laboratory work.
-	I checked the laboratory works done by students from the previous year so I could get an idea of my own by inspiring from them.
-	The application is basically for storing the data about students of a group that has laboratory works on Windows Programming. It allows students to choose either the blue pill or red pill in order to be classified. Choosing the blue pill means that you will have to create a more simplified program but with the condition that you also make the report with specific standards. Choosing the red pill means that your application will be more complex and interesting but on the other hand your report will be more simplified.  So my application has two text labels, 6 buttons (two  ADD buttons, two RESET buttons, BLUE button and  RED button), two field inputs, and one header title.
-	The UI elements are mixed and different, they have different styles and fonts, different sizes.
-	For this laboratory work  I used C style guide.
-	In order to explain the application I made a mock-up using paint:
+•	I started by reading the recommended chapters from the  book ("Programming Windows, 5th Edition", by Charles Petzold) so that I could understand the basics and begin my first laboratory work.
+•	I checked the laboratory works done by students from the previous year so I could get an idea of my own by inspiring from them.
+•	The application is basically for storing the data about students of a group that has laboratory works on Windows Programming. It allows students to choose either the blue pill or red pill in order to be classified. Choosing the blue pill means that you will have to create a more simplified program but with the condition that you also make the report with specific standards. Choosing the red pill means that your application will be more complex and interesting but on the other hand your report will be more simplified.  So my application has two text labels, 6 buttons (two  ADD buttons, two RESET buttons, BLUE button and  RED button), two field inputs, and one header title.
+•	The UI elements are mixed and different, they have different styles and fonts, different sizes.
+•	For this laboratory work  I used C style guide.
+•	In order to explain the application I made a mock-up using paint:
+
+
+
 
 
 1.	The Window’s Title.

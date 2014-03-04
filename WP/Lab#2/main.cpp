@@ -3,27 +3,7 @@
 #include <time.h>
 #include <tchar.h>
 #include "resource.h"
-//Here the ID values of windows are defined
-#define IDC_NEW_ITEM        99
-#define IDC_ADD_BUTTON      100
-#define IDC_ADD_BUTTON2     102
-#define IDC_RESET_BUTTON    103
-#define IDC_RESET_BUTTON2   104
-#define IDC_RED_BUTTON      105
-#define IDC_BLUE_BUTTON     106
-#define IDC_INPUT_TEXT      107
-#define IDC_OUTPUT_TEXT     108
-#define IDC_INPUT_TEXT2     109
-#define IDC_OUTPUT_TEXT2    110
 
-// New buttons(Lab2)
-#define IDC_REMOVE_BUTTON       111
-#define IDC_FILE_EXIT           112
-#define IDC_HELP_ABOUT          113
-#define IDC_HEIGHT_SCROLL       114
-#define IDC_WIDTH_SCROLL        115
-#define IDC_LABEL1              116
-#define IDC_LABEL2              117
 
 int MinWindowHeight = 530;
 int MinWindowWidth  = 590;
@@ -45,6 +25,8 @@ int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszA
     HWND hwnd;                    // This is the handle for our window
     MSG messages;                 // Here messages to the application are saved
     WNDCLASSEX wincl;             // Data structure for the windowclass
+
+    hProgramInstance = hThisInstance;
     /* The Window Structure */
     wincl.hInstance = hThisInstance;
     wincl.lpszClassName = szClassName;
@@ -52,9 +34,9 @@ int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszA
     wincl.style = CS_DBLCLKS | CS_HREDRAW | CS_VREDRAW;
     wincl.cbSize = sizeof (WNDCLASSEX);
     /* Use default icon and mouse-pointer */
-    wincl.hIcon = LoadIcon (NULL, IDI_APPLICATION);                         // Default icon
-    wincl.hIconSm = LoadIcon (NULL, IDI_APPLICATION);                       // Default icon
-    wincl.hCursor = LoadCursor (NULL, IDC_ARROW);                           // Default arrow mouse cursor
+    wincl.hIcon = LoadIcon (NULL, IDI_WARNING);                         // Default icon
+    wincl.hIconSm = LoadIcon(hThisInstance, MAKEINTRESOURCE(IDI_ICON1));    // Custom  icon
+    wincl.hCursor = LoadCursor (hProgramInstance, MAKEINTRESOURCE(IDC_CURSOR1)); // Custom arrow mouse cursor
     wincl.lpszMenuName = NULL;                                              // No menu
     wincl.cbClsExtra = 0;                                                   // No extra bytes after the window class
     wincl.cbWndExtra = 0;                                                   // Structure or the window instance
@@ -66,10 +48,10 @@ int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszA
     hwnd = CreateWindowEx (
         0,                                                                  // Extended possibilites for variation
         szClassName,                                                        // Class name
-        "Lab#1",                                                            // Window title
+        "Lab#2",                                                            // Window title
         WS_OVERLAPPEDWINDOW | WS_CLIPCHILDREN,                              // Basic window style
         CW_USEDEFAULT, CW_USEDEFAULT,                                       // Set starting point to default value
-        720, 440,                                                           // Set the dimensions of the window
+        720, 460,                                                           // Set the dimensions of the window
         HWND_DESKTOP,                                                       // The window is a child-window to desktop
         NULL,                                                               // No menu
         hThisInstance,                                                      // Program Instance handler
@@ -98,7 +80,7 @@ int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszA
 LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) //all the handles to different controls
 {
     static HWND hwndInputText,hwndInputText2,hwndRemoveButton,hwndHeightScroll,hwndWidthScroll,hwndLabel1,hwndLabel2;
-    static HWND hwndOutputText,hwndOutputText2,hwndNewItem;
+    static HWND hwndOutputText,hwndOutputText2;
     LRESULT textSize;
     char * message = new char[100];
     char * placeholder = new char[26];
@@ -124,16 +106,8 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPa
 
     int i;
 
-    // OutputText size and initial position
-    int xOutputText       = 80;
-    int yOutputText       = 20;
-    int OutputTextWidth  = 400;
-    int OutputTextHeight = 300;
 
-    int xOutputText2       = 80;
-    int yOutputText2       = 20;
-    int OutputText2Width  = 400;
-    int OutputText2Height = 300;
+
 
     // Menu & menu items
     HMENU hMenu;
@@ -150,7 +124,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPa
      // Paint and size structs
     TEXTMETRIC tm;
     SCROLLINFO si;
-    HBRUSH brush;
+
 
 
     hdc = GetDC(hwnd);
@@ -249,16 +223,15 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPa
                 NULL);
 
             hwndOutputText = CreateWindowEx(
-                (DWORD)NULL,                                          // The class name required is edit
-                TEXT("ListBox"),                                         // the caption of the button
-                TEXT(""),                                             // Default text.
+             (DWORD)NULL,
+                TEXT("ListBox"),
+                NULL,
                 WS_CHILD | WS_VISIBLE | WS_BORDER |
                 LBS_NOTIFY | LBS_WANTKEYBOARDINPUT,
-                80, 80,                                               // the left and top co-ordinates
-                200, 150,                                             // width and height
-                hwnd,                                                 // parent window handle
-                (HMENU)IDC_OUTPUT_TEXT,                               // the ID of your button
-                hProgramInstance,                                     // the instance of your application
+                80, 80, 200, 150,
+                hwnd,
+                (HMENU)IDC_OUTPUT_TEXT,
+                hProgramInstance,
                 NULL);
 
             hwndInputText = CreateWindowEx(
@@ -275,10 +248,10 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPa
 
             hwndOutputText2 = CreateWindowEx(
                 (DWORD)NULL,                                          // The class name required is edit
-                TEXT("edit"),                                         // the caption of the button
+                TEXT("ListBox"),                                         // the caption of the button
                 TEXT(""),                                             // Default text.
-                WS_VISIBLE | WS_CHILD | WS_BORDER | WS_VSCROLL |      // Textbox styles
-                ES_AUTOVSCROLL | ES_MULTILINE | ES_READONLY,
+                 WS_CHILD | WS_VISIBLE | WS_BORDER |
+                LBS_NOTIFY | LBS_WANTKEYBOARDINPUT,
                 390, 80,                                              // the left and top co-ordinates
                 200, 150,                                             // width and height
                 hwnd,                                                 // parent window handle
@@ -303,9 +276,22 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPa
                 TEXT("Button"),
                 TEXT("Remove"),
                 WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
-                290, 100, 70, 30,
+                290, 100,
+                70, 30,
                 hwnd,
                 (HMENU)IDC_REMOVE_BUTTON,
+                hProgramInstance,
+                NULL);
+
+            hwndRemoveButton = CreateWindowEx(
+                (DWORD)NULL,
+                TEXT("Button"),
+                TEXT("Remove"),
+                WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+                600, 100,
+                70, 30,
+                hwnd,
+                (HMENU)IDC_REMOVE_BUTTON2,
                 hProgramInstance,
                 NULL);
 
@@ -353,16 +339,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPa
                 NULL);
             SetScrollRange(hwndHeightScroll, SB_CTL, 0, 100, TRUE);
 
-            hwndNewItem = CreateWindowEx(
-                (DWORD)NULL,
-                TEXT("Edit"),
-                TEXT(""),
-                WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL,
-                0, 0, 0, 0, hwnd,
-                (HMENU)IDC_NEW_ITEM,
-                hProgramInstance,
-                NULL);
-        // Create menu
+            // Create menu
             hMenu = CreateMenu();
 
             // Add "File" menu, with "Exit" submenu
@@ -370,11 +347,13 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPa
             AppendMenu(hMenu, MF_STRING | MF_POPUP, (UINT)hSubMenu, "&File");
             AppendMenu(hSubMenu, MF_STRING, IDC_FILE_EXIT, "&Exit");
 
-            // Add "View" menu, with "Day" and "Night" submenus
-           // hSubMenu = CreatePopupMenu();
-           // AppendMenu(hMenu, MF_STRING | MF_POPUP, (UINT)hSubMenu, "&View");
-         //   AppendMenu(hSubMenu, MF_STRING, IDC_VIEW_CAT, "&Cat");
-         //   AppendMenu(hSubMenu, MF_STRING, IDC_VIEW_DOG, "&Dog");
+            // Add "View" menu, with 4 submenus
+              hSubMenu = CreatePopupMenu();
+              AppendMenu(hMenu, MF_STRING | MF_POPUP, (UINT)hSubMenu, "&View");
+              AppendMenu(hSubMenu, MF_STRING, IDC_RESET_BUTTON , "&Reset the first list");
+              AppendMenu(hSubMenu, MF_STRING, IDC_RESET_BUTTON2 , "&Reset the second list");
+              AppendMenu(hSubMenu, MF_STRING, IDC_RED_BUTTON , "&Choose the Red Pill            Ctrl+F1");
+              AppendMenu(hSubMenu, MF_STRING, IDC_BLUE_BUTTON ,"&Choose the Blue Pill           Ctrl+F2");
 
             // Add "Help" menu, with "About" submenu
             hSubMenu = CreatePopupMenu();
@@ -384,6 +363,14 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPa
             // Set the menu
             SetMenu(hwnd, hMenu);
             break;
+
+       case WM_SETCURSOR:
+        if (LOWORD(lParam) == HTCLIENT)
+        {
+            SetCursor(LoadCursor(hProgramInstance, MAKEINTRESOURCE(IDC_CURSOR1)));
+            return TRUE;
+        }
+        break;
 
        case WM_SIZE:
             Width  = LOWORD(lParam);
@@ -584,7 +571,9 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPa
        case WM_COMMAND:
             //Handling button presses
             switch(LOWORD(wParam)) {
+
                 case IDC_OUTPUT_TEXT:
+
                     switch (HIWORD(wParam))
                     {
                         case LBN_DBLCLK:
@@ -594,6 +583,19 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPa
                             break;
                     }
                     break;
+
+                case IDC_OUTPUT_TEXT2:
+
+                    switch (HIWORD(wParam))
+                    {
+                        case LBN_DBLCLK:
+                            index = SendMessage(hwndOutputText2, LB_GETCURSEL, 0, 0);
+                            SendMessage(hwndOutputText2, LB_DELETESTRING, (WPARAM)index, 0);
+                            RedrawWindow(hwnd, NULL, NULL, RDW_INVALIDATE | RDW_ERASE);
+                            break;
+                    }
+                    break;
+
                 case IDC_INPUT_TEXT:
                     if(HIWORD(wParam) == EN_SETFOCUS)
                     {
@@ -658,48 +660,33 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPa
 
                 case IDC_ADD_BUTTON:
 
-                    TextLength = SendMessage(hwndNewItem, WM_GETTEXTLENGTH, 0, 0);
+                    TextLength = SendMessage(hwndInputText, WM_GETTEXTLENGTH, 0, 0);
                     szText = (char*)malloc(TextLength+1);
-                    SendMessage(hwndNewItem, WM_GETTEXT, TextLength+1, (LPARAM)szText);
+                    SendMessage(hwndInputText, WM_GETTEXT, TextLength+1, (LPARAM)szText);
                     SendMessage(hwndOutputText, LB_ADDSTRING, 0, (LPARAM)szText);
-                    SendMessage(hwndNewItem, WM_SETTEXT, 0, (LPARAM)"");
+                    SendMessage(hwndInputText, WM_SETTEXT, 0, (LPARAM)"");
                     free(szText);
                     break;
 
                 case IDC_ADD_BUTTON2:
-                    //sending the message from the edit box to the second list box
-                    textSize = SendMessage(hwndInputText2, WM_GETTEXT, 100, (LPARAM)message);
-                    message[textSize] = _T('\0');
 
-                    if(strlen(message) && strcmp(message, placeholder))
-                    {
-                        char *item = new char[200];
-                        if(items2)
-                            strcpy(item, "\r\n - ");
-                        else
-                            strcpy(item, " - ");                                    // Managing the new string
-                        strcat(item, message);
-                        SendMessage(hwndOutputText2, EM_REPLACESEL,
-                            TRUE, (LPARAM)item);                                    // Appending a new item in the list
-                        SendMessage(hwndInputText2, WM_SETTEXT, TRUE,(LPARAM)"");   // RESETing the text input
-                        delete [] item;                                             // Managing the memory
-                        items2 += 1;                                                // Incrementing the number of items
-                        SendMessage(
-                            hwndInputText2,
-                            WM_SETTEXT,
-                            TRUE,
-                            (LPARAM)placeholder);                                   // Recovering the placeholder
-                        focused2 = 0;
-                    }
-                    RedrawWindow(hwnd, NULL, NULL, RDW_INVALIDATE | RDW_ERASE);
+                    TextLength = SendMessage(hwndInputText2, WM_GETTEXTLENGTH, 0, 0);
+                    szText = (char*)malloc(TextLength+1);
+                    SendMessage(hwndInputText2, WM_GETTEXT, TextLength+1, (LPARAM)szText);
+                    SendMessage(hwndOutputText2, LB_ADDSTRING, 0, (LPARAM)szText);
+                    SendMessage(hwndInputText2, WM_SETTEXT, 0, (LPARAM)"");
+                    free(szText);
                     break;
 
                 case IDC_RESET_BUTTON:
-                    SendMessage(hwndOutputText, WM_SETTEXT, 0, (LPARAM)"");
+                    SendMessage(hwndOutputText, LB_RESETCONTENT, 0, 0);
                     break;
+
                 case IDC_RESET_BUTTON2:
-                    SendMessage(hwndOutputText2, WM_SETTEXT, 0, (LPARAM)"");
+
+                    SendMessage(hwndOutputText2, LB_RESETCONTENT, 0, 0);
                     break;
+
                 case IDC_RED_BUTTON:
                     if (MessageBox(NULL, TEXT("Are you sure you want to choose the red pill?"), TEXT("Are you sure?"), MB_YESNO | MB_DEFBUTTON2 | MB_ICONWARNING) == IDYES) {
                         return MessageBox(NULL, TEXT("YOU ARE A TRUE SPARTAN !!!"), TEXT("Right choice!"), MB_OK | MB_ICONASTERISK);
@@ -714,6 +701,14 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPa
                         SendMessage(hwndOutputText, LB_DELETESTRING, i, 0);
                     }
                     break;
+
+                case IDC_REMOVE_BUTTON2:
+                    i = SendMessage(hwndOutputText2, LB_GETCURSEL, 0, 0);
+                    if(i != LB_ERR) {
+                        SendMessage(hwndOutputText2, LB_DELETESTRING, i, 0);
+                    }
+                    break;
+
                 case IDC_HELP_ABOUT:
                     return DialogBox(hProgramInstance, MAKEINTRESOURCE(IDD_ABOUT), NULL, (DLGPROC)DialogProcedure);
                     break;
@@ -723,6 +718,25 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPa
                     break;
             }
             break;
+
+        case WM_KEYDOWN:
+            GetWindowRect(hwnd, &rect);
+            WinWidth = rect.right - rect.left;
+            WinHeight = rect.bottom - rect.top;
+            SysWidth = GetSystemMetrics(SM_CXSCREEN);
+            SysHeight = GetSystemMetrics(SM_CYSCREEN);
+
+            // Color window in white on Shift + "/?" for US
+            if((wParam == VK_F1)&&(HIBYTE(GetKeyState(VK_CONTROL)) > 1)) {
+                 if (MessageBox(NULL, TEXT("Are you sure you want to choose the red pill?"), TEXT("Are you sure?"), MB_YESNO | MB_DEFBUTTON2 | MB_ICONWARNING) == IDYES) {
+                        return MessageBox(NULL, TEXT("YOU ARE A TRUE SPARTAN !!!"), TEXT("Right choice!"), MB_OK | MB_ICONASTERISK);
+                    };
+                   break;
+            }
+            // Color window in green on Shift + "'"" for US
+            if((wParam == VK_F2)&&(HIBYTE(GetKeyState(VK_CONTROL)) > 1)) {
+                return MessageBox(NULL, TEXT("Good Luck with the report ;)"), TEXT("Wrong choice!"), MB_OK | MB_ICONWARNING);
+            }
 
         case WM_CTLCOLOREDIT:
                 if(GetDlgCtrlID((HWND)lParam) == IDC_INPUT_TEXT)

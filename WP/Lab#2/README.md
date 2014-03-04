@@ -27,15 +27,15 @@ Creating the application
 •	This application continues the same topic “Red Pill & Blue Pill”.The application has two text labels, two  input fields , and 8 buttons ( Reset button 1, Reset button 2, ADD button1, ADD button 2, REMOVE 1 and REMOVE button  2,Red button, Blue button ), two static labels, five scrollbars (which change the height and the width of the window and the background color), two traversal scrollbars, the main menu (file, view, help).
 •	In order to understand more clearly I came up with this mockup :
 
-![image] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%232/ScreenShot/Image.bmp)
 
 
+![image 2] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%232/ScreenShot/image%202.png)
 
 Screenshots
 
-![image 2] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%232/ScreenShot/image%202.png)
+![image] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%232/ScreenShot/Image.bmp)
  
 
 Conclusions
-First of all I can say that this laboratory work was very interesting for me, doing all this tasks made me to be proud of my work because I’ve tried to manage all the features as good as possible. 
-I tried to understand all concepts of manipulation of Menus, keyboard, dialog boxes, listboxes, etc. using additional information. It was challenging to complete all the tasks, I really enjoyed performing all of them. My goal was to extend my idea about red and blue pills. This laboratory work broadened and deepened my understanding of Event-Driven Programming, message-sending, and Win32 API in particular.
+First of all I can say that this laboratory work was very interesting for me, doing all this tasks made me  proud of my work because I’ve tried to manage all the features as good as possible. 
+I tried to understand all concepts of manipulation of Menus, keyboard, dialog boxes, listboxes, etc  using additional information. It was challenging to complete all the tasks, I really enjoyed performing all of them. My goal was to extend my idea about red and blue pills. This laboratory work broadened and deepened my understanding of Event-Driven Programming, message-sending, and Win32 API in particular.

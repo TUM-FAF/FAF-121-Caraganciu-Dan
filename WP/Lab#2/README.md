@@ -33,7 +33,7 @@ Creating the application
 
 Screenshots
 
-![image2] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%232/ScreenShot/Image2.bmp)
+![image 2] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%232/ScreenShot/Image 2.bmp)
  
 
 Conclusions

@@ -40,19 +40,19 @@ Creating the application
 1.The drawing area. 
 2.Custom bitmap image. 
 3.Instruments bar which contains:
--	Pencil is used for drawing a continuous line with the size of 1.
--	Brush is used for drawing a continuous line with the size of 10.
--	Eraser is used for erasing the drawing area.
--	Rectangle draws a rectangle on the drawing area depending on how you click and drag the mouse on the screen. Basically you draw the diagonal and the rectangle appears. 
--	Line draws a straight line. When you left-click the first time you set the starting point and after you release you set the end point of your line.
--	Ellipse tool has the purpose of drawing an ellipse.
--	Bezier curve is used for drawing a curve. For this you click and drag two times in a row. 
+ -	Pencil is used for drawing a continuous line with the size of 1.
+ -	Brush is used for drawing a continuous line with the size of 10.
+ -	Eraser is used for erasing the drawing area.
+ -	Rectangle draws a rectangle on the drawing area depending on how you click and drag the mouse on the screen.Basically you draw the diagonal and the rectangle appears. 
+ -	Line draws a straight line. When you left-click the first time you set the starting point and after you release you set the end point of your line.
+ -	Ellipse tool has the purpose of drawing an ellipse. 
+ -	Bezier curve is used for drawing a curve. For this you click and drag two times in a row. 
 4.Size and color bar which contains:
--	Fill color check box which sets whether to color the interior of a shape or not. Also you can choose which color to use.(it’s unchecked by default)
--	Border color allows you to choose the color of the pencil, brush or the border color of a shape.
--	Eraser size input sets how big you want your eraser to be.
--	Border size sets the size of the pencil. Also note that the Brush is set by default to 10 and is not changed by this input. This input affects everything except for the Brush.   
--	5.Gradient
+ -	Fill color check box which sets whether to color the interior of a shape or not. Also you can choose which color to use.(it’s unchecked by default)
+ -	Border color allows you to choose the color of the pencil, brush or the border color of a shape.
+ -	Eraser size input sets how big you want your eraser to be.
+ -	Border size sets the size of the pencil. Also note that the Brush is set by default to 10 and is not changed by this input. This input affects everything except for the Brush.   
+5.Gradient
 
 
 Screenshots

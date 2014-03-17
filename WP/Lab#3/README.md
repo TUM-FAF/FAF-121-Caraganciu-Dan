@@ -39,8 +39,7 @@ Creating the application
 
  1.The drawing area.                     
  2.Custom bitmap image. 
- 3.Instruments bar which contains:
- 
+ 3.Instruments bar which contains: 
  -	Pencil is used for drawing a continuous line with the size of 1.
  -	Brush is used for drawing a continuous line with the size of 10.
  -	Eraser is used for erasing the drawing area.
@@ -54,6 +53,7 @@ Creating the application
  -	Border color allows you to choose the color of the pencil, brush or the border color of a shape.
  -	Eraser size input sets how big you want your eraser to be.
  -	Border size sets the size of the pencil. Also note that the Brush is set by default to 10 and is not changed by this input. This input affects everything except for the Brush.   
+ 
  5.Gradient
 
 

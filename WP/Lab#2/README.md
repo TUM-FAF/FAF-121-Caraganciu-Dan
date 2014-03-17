@@ -43,7 +43,8 @@ Creating the application
 Screenshots
 
 ![image] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%232/ScreenShot/Image.bmp)
- 
+![image3] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%232/ScreenShot/image3.png)
+![image4] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%232/ScreenShot/image4.png)
 
 Conclusions
 --------------------------

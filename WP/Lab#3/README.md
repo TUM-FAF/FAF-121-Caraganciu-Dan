@@ -36,6 +36,7 @@ Creating the application
 -	First I opened Paint and choose what functions I would like to have in my program. Since this is a much  more simplified version of Paint I chose the most basic tools like: pencil, brush, eraser, added some shapes and a dialog box for choosing a color. I also added two input labels for Eraser size and Border size.
 -	Here is the mockup I made:
 ![mockup] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%233/Images/mockup.png)
+
 1.The drawing area. 
 2.Custom bitmap image. 
 3.Instruments bar which contains:

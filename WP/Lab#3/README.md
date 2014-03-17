@@ -38,9 +38,8 @@ Creating the application
 ![mockup] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%233/Images/mockup.png)
 
  1.The drawing area.                     
- 2.Custom bitmap image. 
- 3.Instruments bar which contains: 
- 
+ 2.Custom bitmap image.
+ 3.Instruments bar which contains:
  
   -	**Pencil** is used for drawing a continuous line with the size of 1.
   -	**Brush** is used for drawing a continuous line with the size of 10.

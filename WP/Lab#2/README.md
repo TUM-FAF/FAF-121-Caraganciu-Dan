@@ -1,52 +1,64 @@
-Windows Programming Laboratory Work #2
+Windows Programming Laboratory Work #3
 ======================================
 
 Title
 -----
-Advanced Form Elements. Child Windowses. Basics of Working With Keyboard.
+Basics of Working with Mouse. GDI Primitives. Bezier Curve.
 
 Contents
 --------
-- The Keyboard
-- Child Window Controls
-  - Scroll Bar
-  - Listbox
-- Menus and Other Resources
-- Dialog Boxes
+•	Mouse
+•	Device context
+•	GDI Primitives
+•	Line
+•	Curve
+•	Plane
+•	Bitmap image
+•	Bezier curve
 
 Mandatory Objectives (completed)
 --------------------------------
-- Display a dialog box on some event.
-- Add a system menu to your application with at least 3 items.
-- Add a scroll bar that will change any visible parameter of any other element.
-- Hook keyboard input. Add 2 custom events for 2 different keyboard combinations.
+•	Draw few lines of different colors and weights
+•	Draw a Bezier curve
+•	Draw few plane objects (ex. circle, square, pie, polygon...) of different colors, weights, filled and not.
+•	Draw 2 different objects using mouse
 
 Objectives With Points (completed)
 ----------------------------------
-- Add a listbox and attach some events when any element is accessed (double-clicked). **(2 pt)**
-- Add 2 scroll bars that will manage main window size or position. **(1 pt)**
-- Customize your application by adding an icon and using different cursor in application. **(1 pt)**
-- Use a scroll bar to scroll through application working space. Scroll should appear only when necessary. **(1 pt)**
-
+•	Draw a custom bitmap image (1 pt.)
+•	Add a switch (button, select list...) that will change mouse ability to draw objects (2 pt.)
+•	Draw a Bezier curve using mouse (1 pt.)
+•	Fill an object with a gradient (1 pt.)
+•	Use mouse as an eraser of a adjustable width (2 pt.)
 
 Creating the application
 --------------------------
-- In order to create this application I’ve read almost all chapters from the book ("Programming Windows, 5th Edition", by Charles Petzold) During the process I consulted the documentation on the MSDN page and Win32 Tips & Tricks.
--	I tried to create something new which hasn’t been done before.
--	This application continues the same topic “Red Pill & Blue Pill”.The application has two text labels, two  input fields , and 8 buttons ( Reset button 1, Reset button 2, ADD button1, ADD button 2, REMOVE 1 and REMOVE button  2,Red button, Blue button ), two static labels, five scrollbars (which change the height and the width of the window and the background color), two traversal scrollbars, the main menu (file, view, help).
--	In order to explain this application I came up with this mockup :
+•	First I opened Paint and choose what functions I would like to have in my program. Since this is a much        more simplified version of Paint I chose the most basic tools like: pencil, brush, eraser, added some shapes and a dialog box for choosing a color. I also added two input labels for Eraser size and Border size.
+•	Here is the mockup I made:
+![mockup] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%233/Images/mockup.png)
 
+1.	The drawing area.
+2.	Custom bitmap image.
+3.	Instruments bar which contains:
+•	Pencil is used for drawing a continuous line with the size of 1.
+•	Brush is used for drawing a continuous line with the size of 10.
+•	Eraser is used for erasing the drawing area.
+•	Rectangle draws a rectangle on the drawing area depending on how you click and drag the mouse on the screen. Basically you draw the diagonal and the rectangle appears. 
+•	Line draws a straight line. When you left-click the first time you set the starting point and after you release you set the end point of your line.
+•	Ellipse tool has the purpose of drawing an ellipse.
+•	Bezier curve is used for drawing a curve. For this you click and drag two times in a row.
+4.	Size and color bar which contains:
+•	Fill color check box which sets whether to color the interior of a shape or not. Also you can choose which color to use.(it’s unchecked by default)
+•	Border color allows you to choose the color of the pencil, brush or the border color of a shape.
+•	Eraser size input sets how big you want your eraser to be.
+•	Border size sets the size of the pencil. Also note that the Brush is set by default to 10 and is not changed by this input. This input affects everything except for the Brush.  
+5.	Gradient
 
-
-![image 2] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%232/ScreenShot/image%202.png)
 
 Screenshots
 
-![image] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%232/ScreenShot/Image.bmp)
-![image3] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%232/ScreenShot/image3.png)
-![image4] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%232/ScreenShot/image4.png)
+![Capture] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%233/Images/Capture.PNG)
 
 Conclusions
 --------------------------
-First of all I can say that this laboratory work was very interesting for me, doing all this tasks made me  proud of my work because I’ve tried to manage all the features as good as possible. 
-I tried to understand all concepts of manipulation of Menus, keyboard, dialog boxes, listboxes, etc  using additional information. It was challenging to complete all the tasks, I really enjoyed performing all of them. My goal was to extend my idea about red and blue pills. This laboratory work broadened and deepened my understanding of Event-Driven Programming, message-sending, and Win32 API in particular.
+This laboratory work was even more interesting and I really enjoyed working on it. I was very addicted to do all the tasks but it was hard somehow to organize my thoughts in order to implement them all and I did just a part of them, but I will manage the rest of them in the near future (I hope).         In this laboratory work I familiarized with some of drawing possibilities and the right way of working with the mouse. For me it is a new experience and of course I still have work to do for better results but right now I kind of feel accomplished. 

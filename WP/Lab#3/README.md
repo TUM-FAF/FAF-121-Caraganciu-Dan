@@ -40,7 +40,6 @@ Creating the application
  1.The drawing area.                     
  2.Custom bitmap image.
  3.Instruments bar which contains:
- 
   -	**Pencil** is used for drawing a continuous line with the size of 1.
   -	**Brush** is used for drawing a continuous line with the size of 10.
   -	**Eraser** is used for erasing the drawing area.

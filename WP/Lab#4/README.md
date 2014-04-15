@@ -4,13 +4,11 @@ Windows Programming Laboratory Work #4
 Title
 -----
 Windows Timer. Animation.
-
 Contents
 --------
 - Windows timer
 
 Mandatory Objectives (completed)
-
 --------------------------------
 -	Create an animation based on Windows timer which involves at least 5 different drawn objects                                                               
 Objectives With Points (completed)
@@ -37,4 +35,4 @@ Screenshots
 
 ![Capture] (https://raw.github.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%233/)
 
-      This laboratory work was more fun. I liked doing the nyan cat because it was not as difficult as I thought. Most of all I enjoyed creating the two Pacmans and making them move as desired. 
+   This laboratory work was more fun. I liked doing the nyan cat because it was not as difficult as I thought. Most of all I enjoyed creating the two Pacmans and making them move as desired. 

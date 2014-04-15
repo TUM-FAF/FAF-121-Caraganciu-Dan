@@ -18,7 +18,7 @@ Objectives With Points (completed)
 -	Solve flickering problem (2 pt.)
 -	Add animated objects which interact with each other (6 pt.)                           
 -	Following clear and nice code style (1 pt.)
-- Animate a Nyan Cat that leaves a rainbow tail�(Math.floor(+35% for task with interacting objects)).
+- Animate a Nyan Cat that leaves a rainbow tail(Math.floor(+35% for task with interacting objects)).
 
 So what does this application do?
 -------------------------- 

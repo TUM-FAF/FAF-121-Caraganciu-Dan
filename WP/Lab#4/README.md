@@ -11,13 +11,14 @@ Contents
 Mandatory Objectives (completed)
 --------------------------------
 -	Create an animation based on Windows timer which involves at least 5 different drawn objects                                                               
+
 Objectives With Points (completed)
 ----------------------------------
 -	Increase and decrease animation speed using mouse wheel (2 pt.)
 -	Solve flickering problem (2 pt.)
 -	Add animated objects which interact with each other (6 pt.)                           
 -	Following clear and nice code style (1 pt.)
--    Animate a Nyan Cat that leaves a rainbow tail�(Math.floor(+35% for task with interacting objects)).
+- Animate a Nyan Cat that leaves a rainbow tail�(Math.floor(+35% for task with interacting objects)).
 
 So what does this application do?
 -------------------------- 

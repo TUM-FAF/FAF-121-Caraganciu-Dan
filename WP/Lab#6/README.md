@@ -1,39 +1,38 @@
-Windows Programming Laboratory Work #4
-======================================
+Windows Programming
+=====================
+#Laboratory Work #6
 
-Title
------
-Windows Timer. Animation.
+##Topic: Developing using C#. WinRT
+
 Contents
 --------
-- Windows timer
+* C#
+* WinRT
 
-Mandatory Objectives (completed)
---------------------------------
--	Create an animation based on Windows timer which involves at least 5 different drawn objects                                                               
+Completed Mandatory Objectives
+--------------------
+* Create an Win32 or application using C#
+  * Create a ToDo list. Should contain:
+    * A list of tasks
+    * A way to add new tasks from UI
 
-Objectives With Points (completed)
-----------------------------------
--	Increase and decrease animation speed using mouse wheel (2 pt.)
--	Solve flickering problem (2 pt.)
--	Add animated objects which interact with each other (6 pt.)                           
--	Following clear and nice code style (1 pt.)
-- Animate a Nyan Cat that leaves a rainbow tail(Math.floor(+35% for task with interacting objects)).
 
-So what does this application do?
--------------------------- 
-1.On the bottom of the window the nyan cat runs from left to right and each time it touches the right wall it starts to run again from left to right.
+Completed Objectives With Points
+-----------------------------------
+*	Create a report (3pt) yes, this is a +3pt from office
+*	Claim point for your own tasks (up to 7pt)
+  *		Delete button is used for removing the desired task.
+  * 	Reset button removes all the tasks from the list.
+  *  Add button is used for adding a new task
+  *  In the main menu we have 2 options: File and About.In the File menu we have the option to exit the application.
 
-2.Above the nyan cat two Pacmans are running one after another. Each time they touch the wall they change the direction and go up with one level. After passing the 3rd level they go down to the 2nd level and then 1st level and then repeat the process again. Also initially they have orange and blue color but each time one of them eats another one it changes its color to a random one.
 
-3.Above the 3rd level you can add balls which have random colors, appear in random positions and move in different directions. This is done by left clicking.
-Also the balls will ricochet from the walls. The bottom wall is considered to be the top of the 3rd level.
- 
-4.The speed of the animation can be increased or decreased by using the mouse wheel.
- 
-Screenshots
---------------------------
+Result Application
+------------------
 
-![Capture] (https://raw.githubusercontent.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%234/Screenshot/screen.png)
+https://raw.githubusercontent.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%236/Screenshot/screen.png
 
-   This laboratory work was more fun. I liked doing the nyan cat because it was not as difficult as I thought. Most of all I enjoyed creating the two Pacmans and making them move as desired. 
+Conclusions
+-----------
+
+This was my first laboratory work based on C# language.I used the Visual Studio IDE and Windows Forms Application, which made my work much easier. I used drag and drop options in order to create the GUI and all buttons. This feature of Visual Studio IDE is very convenient because you have to write only code for actions, not for buttons. The functions which I implemented in C# are pretty simple; they are basically all build in. I didn’t encounter any problems while doing this laboratory work.

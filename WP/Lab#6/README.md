@@ -30,7 +30,7 @@ Completed Objectives With Points
 Result Application
 ------------------
 
-https://raw.githubusercontent.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%236/Screenshot/screen.png
+![screen] (https://raw.githubusercontent.com/TUM-FAF/FAF-121-Caraganciu-Dan/master/WP/Lab%236/Screenshot/screen.png)
 
 Conclusions
 -----------
